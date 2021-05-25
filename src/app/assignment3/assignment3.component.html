@@ -1,0 +1,15 @@
+<h4><i>Assignment 3 Section!</i></h4>
+<ol>
+  <li>Add a input field which updates a property ("username") via two way binding.</li>
+  <li>Output the username property via String interpolation in a paragraph below the input.</li>
+  <li>Add a button which may be clicked if the username is NOT an empty string.</li>
+  <li>Upon clicking the button, the username should be reset to an empty string.</li>
+</ol>
+<hr>
+<label>Input your username: &nbsp; </label>
+<br>
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>Your username is: {{username}}</p>
+<button class="btn btn-secondary"
+        [disabled]="username === ''"
+        (click)="resetUsername()">Reset Username</button>
