@@ -1,13 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule} from "@angular/forms";
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from "@angular/forms";
 
-import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
-import { WarningAlertComponent } from './warning-alert/warning-alert.component';
-import { SuccessAlertComponent } from './success-alert/success-alert.component';
-import { Assignment3Component } from './assignment3/assignment3.component';
+import {AppComponent} from './app.component';
+import {ServerComponent} from './server/server.component';
+import {ServersComponent} from './servers/servers.component';
+import {WarningAlertComponent} from './warning-alert/warning-alert.component';
+import {SuccessAlertComponent} from './success-alert/success-alert.component';
+import {Assignment3Component} from './assignment3/assignment3.component';
+import {Assignment4Component} from './assignment4/assignment4.component';
 
 
 @NgModule({
@@ -17,14 +18,16 @@ import { Assignment3Component } from './assignment3/assignment3.component';
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    Assignment3Component
+    Assignment3Component,
+    Assignment4Component
   ],
-    imports: [
-        BrowserModule,
-        FormsModule,
+  imports: [
+    BrowserModule,
+    FormsModule,
 
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

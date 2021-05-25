@@ -1,0 +1,30 @@
+<h4 class="mt-5"><i>Assignment 4 Section</i></h4>
+<ol>
+  <li>Add a button which says "Display Details"</li>
+  <li>Add a paragraph with any content of your choice (e.g. "Secret Password = Tuna")</li>
+  <li>Toggle the displaying of the paragraph with the button created in the first step.</li>
+  <li>Log all button clicks in an array an output that array below the secret paragraph. (maybe log a timestamp or simpy
+    an incoming number.)
+  </li>
+  <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color
+    (ngClass).
+  </li>
+</ol>
+<hr>
+<button class="btn btn-outline-primary" (click)="paragraphDisplay = !paragraphDisplay">Display Details</button>
+<p *ngIf="paragraphDisplay">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et ligula sit amet neque
+  molestie dapibus. Interdum et
+  malesuada fames ac ante ipsum primis in faucibus. Nam pharetra dignissim velit vel pharetra. Praesent quis sagittis
+  justo. Morbi mattis eu tellus eget hendrerit. Praesent et lorem sit amet felis pharetra gravida. Nulla in tellus
+  tincidunt sapien venenatis vehicula. Suspendisse ante erat, congue sit amet augue ut, pellentesque volutpat turpis.
+  Phasellus et lobortis quam. Aenean sollicitudin ac turpis quis lacinia. Mauris iaculis nisl sit amet justo scelerisque
+  auctor. Nulla cursus augue quis eros consectetur, nec volutpat purus imperdiet. Curabitur porttitor nulla quis quam
+  facilisis tincidunt. Donec eleifend tempor justo, sit amet facilisis nisl cursus ut. Curabitur hendrerit tortor in
+  ligula lobortis commodo.</p>
+
+<button class="btn btn-outline-secondary" (click)="onToggleDetails()">On Toggle Details</button>
+<p *ngIf="paragraphDisplay">Another Random Paragraph.</p>
+<div *ngFor="let logItem of log"
+     [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+     [ngClass]="{'white-text': logItem >= 5}">{{logItem}}</div>
+

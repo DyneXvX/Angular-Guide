@@ -1,5 +1,8 @@
 <div>
   <h6><i>String interpretation.</i></h6>
-  <p>The Server with ID {{serverId}} is {{getServerStatus()}}</p>
+  <h6><i>Using a ngFor Loop</i></h6>
+  <p [ngStyle]="{backgroundColor: getColor()}"
+     [ngClass]="{online: serverStatus === 'online'}">
+    The Server with ID {{serverId}} is {{getServerStatus()}}</p>
 </div>
 <hr>
