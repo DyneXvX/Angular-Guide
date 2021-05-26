@@ -11,7 +11,8 @@ export class Assignment4Component implements OnInit {
 
   onToggleDetails() {
     this.paragraphDisplay = !this.paragraphDisplay;
-    this.log.push(this.log.length + 1);
+    //this.log.push(this.log.length + 1);
+    this.log.push(new Date());
   }
 
   constructor() {
